@@ -1,0 +1,25 @@
+[
+  {
+    "kind": "comment",
+    "builder": "v1",
+    "docs": [
+      "@Perfect Evolution Core proccesses",
+      "Core domain:     https://perfect-evolution.com                 Goland        -   3000, 3001, 3002, 3003, 3004",
+      "MIKEKARYPIDIS:   https://mikekarypidis.gr                      NEXTJS        -   3328"
+    ]
+  },
+  {
+    "name": "perfect-evolution.com", "kind": "server", "secure": true, "builder": "v1", "skip": true,
+    "ssl": "/etc/letsencrypt/live/perfect-evolution.com/cert.pem",
+    "ssl_key": "/etc/letsencrypt/live/perfect-evolution.com/privkey.pem",
+    "local_servers": ["127.0.0.1:3000", "127.0.0.1:3001", "127.0.0.1:3002", "127.0.0.1:3003", "127.0.0.1:3004"],
+    "description": "ROOT domain of perfect-evolution - Goland server"
+  },
+  {
+    "name": "mikekarypidis.gr", "kind": "server", "secure": true, "builder": "v1",
+    "ssl": "/etc/letsencrypt/live/mikekarypidis.gr/cert.pem",
+    "ssl_key": "/etc/letsencrypt/live/mikekarypidis.gr/privkey.pem",
+    "local_servers": ["127.0.0.1:3328"],
+    "description": "Mike Karypidis - NextJS"
+  }
+]

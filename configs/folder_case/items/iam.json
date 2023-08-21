@@ -1,0 +1,33 @@
+[
+  {
+    "kind": "comment",
+    "builder": "v1",
+    "docs": [
+      "@IAM authentication service",
+      "IAM UI:          https://iam-core.perfect-evolution.com        Java          -   6069",
+      "IAM UI:          https://iam.perfect-evolution.com             Rails         -   6079",
+      "IAM ACCOUNT:     https://account.perfect-evolution.com         Rails         -   6089"
+    ]
+  },
+  {
+    "name": "iam-core.perfect-evolution.com", "kind": "server", "secure": true, "builder": "v1",
+    "ssl": "/etc/letsencrypt/live/iam-core.perfect-evolution.com/cert.pem",
+    "ssl_key": "/etc/letsencrypt/live/iam-core.perfect-evolution.com/privkey.pem",
+    "local_servers": ["127.0.0.1:6089"],
+    "description": "IAM ADMIN - Java server"
+  },
+  {
+    "name": "iam.perfect-evolution.com", "kind": "server", "secure": true, "builder": "v1",
+    "ssl": "/etc/letsencrypt/live/iam.perfect-evolution.com/cert.pem",
+    "ssl_key": "/etc/letsencrypt/live/iam.perfect-evolution.com/privkey.pem",
+    "local_servers": ["127.0.0.1:6069"],
+    "description": "IAM UI - Rails server"
+  },
+  {
+    "name": "account.perfect-evolution.com", "kind": "server", "secure": true, "builder": "v1",
+    "ssl": "/etc/letsencrypt/live/account.perfect-evolution.com/cert.pem",
+    "ssl_key": "/etc/letsencrypt/live/account.perfect-evolution.com/privkey.pem",
+    "local_servers": ["127.0.0.1:6079"],
+    "description": "IAM ACCOUNT - Rails server"
+  }
+]

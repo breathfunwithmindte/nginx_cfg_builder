@@ -1,0 +1,35 @@
+{
+  "name": "perf_nginxbuilder",
+  "output": "default",
+  "version": "01",
+  "items": [
+    {
+      "kind": "comment",
+      "builder": "v1",
+      "docs": ["Some comment here, Hello world, I am Kristina"]
+    },
+    {
+      "kind": "server",
+      "name": "mysubdomain.mydomain",
+      "secure": true,
+      "builder": "v1",
+      "ssl": "/etc/letsencrypt/live/mydomain.com/cert.pem",
+      "ssl_key": "/etc/letsencrypt/live/mydomain.com/privkey.pem",
+      "local_servers": [ "127.0.0.1:5000" ]
+    },
+    {
+      "kind": "server",
+      "name": "nossl.mydomain",
+      "builder": "v1",
+      "local_servers": [ "127.0.0.1:5000" ]
+    },
+    {
+      "kind": "server",
+      "name": "customlocation.mydomain",
+      "builder": "v1",
+      "location": "/my_custom_location",
+      "l_properties": ["limit_req zone=mylimit"],
+      "local_servers": [ "127.0.0.1:5000" ]
+    }
+  ]
+}
